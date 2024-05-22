@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Nav = () => {
@@ -6,13 +6,13 @@ const Nav = () => {
         <>
     <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
     <div className="flex-1">
-    <a className="btn btn-ghost gap-0 text-secondary normal-case text-2xl">
-        Byte<span className="text-primary">blaze</span></a>
+    <Link to="/"><a className="btn btn-ghost gap-0 text-secondary normal-case text-2xl">
+        Byte<span className="text-primary">blaze</span></a></Link>
     </div>
     <div className="flex-none">
     <ul className="menu menu-horizontal px-1 font-bold">
       
-      <li><NavLink to="/home" className={ ({isActive}) => isActive? "text-primary font-bold" : "font-bold"}>Home</NavLink></li>
+      <li><NavLink to="/" className={ ({isActive}) => isActive? "text-primary font-bold" : "font-bold"}>Home</NavLink></li>
       <li><NavLink to="/blogs" className={({isActive}) => isActive? "text-primary font-bold" : "font-bold"}>Blogs</NavLink></li>
       <li><NavLink to="/bookmarks" className={({isActive}) => isActive? "text-primary font-bold" : "font-bold"}>Bookmarks</NavLink></li>
      
